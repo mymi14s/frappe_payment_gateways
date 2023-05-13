@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include frappe_payment_gateways *.css
+recursive-include frappe_payment_gateways *.csv
+recursive-include frappe_payment_gateways *.html
+recursive-include frappe_payment_gateways *.ico
+recursive-include frappe_payment_gateways *.js
+recursive-include frappe_payment_gateways *.json
+recursive-include frappe_payment_gateways *.md
+recursive-include frappe_payment_gateways *.png
+recursive-include frappe_payment_gateways *.py
+recursive-include frappe_payment_gateways *.svg
+recursive-include frappe_payment_gateways *.txt
+recursive-exclude frappe_payment_gateways *.pyc
