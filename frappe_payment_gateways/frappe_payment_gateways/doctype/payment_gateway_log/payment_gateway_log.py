@@ -13,6 +13,6 @@ class PaymentGatewayLog(Document):
 				"status": ["!=", "Paid"]
 				})):
 				payment_request = frappe.get_doc("Payment Gateway Request", self.payment_gateway_request)
-				payment_request.status ='Paid'
-				payment_request.submit(ignore_permissions=1)
+				payment_request.db_set('status', 'Paid')
+				payment_request.db_set('docstatus', 1)
 
