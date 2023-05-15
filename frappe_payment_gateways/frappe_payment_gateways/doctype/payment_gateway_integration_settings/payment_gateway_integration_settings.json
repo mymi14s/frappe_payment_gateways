@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "autoname": "format:{gateway}-{#}",
+ "creation": "2023-05-13 17:59:27.773899",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gateway",
+  "callback_url",
+  "webhook_url",
+  "column_break_0nsce",
+  "enabled",
+  "secret_key",
+  "public_key"
+ ],
+ "fields": [
+  {
+   "fieldname": "gateway",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Gateway",
+   "options": "Paystack",
+   "reqd": 1
+  },
+  {
+   "fieldname": "secret_key",
+   "fieldtype": "Password",
+   "label": "Secret Key"
+  },
+  {
+   "fieldname": "public_key",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Public Key",
+   "reqd": 1
+  },
+  {
+   "fieldname": "callback_url",
+   "fieldtype": "Data",
+   "label": "Callback URL"
+  },
+  {
+   "fieldname": "webhook_url",
+   "fieldtype": "Data",
+   "label": "Webhook URL"
+  },
+  {
+   "default": "0",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "column_break_0nsce",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "links": [],
+ "modified": "2023-05-13 18:25:56.247920",
+ "modified_by": "Administrator",
+ "module": "Frappe Payment Gateways",
+ "name": "Payment Gateway Integration Settings",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "gateway",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
