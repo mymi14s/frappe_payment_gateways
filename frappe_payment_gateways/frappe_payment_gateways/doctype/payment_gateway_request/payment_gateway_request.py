@@ -8,10 +8,12 @@ from frappe_payment_gateways.frappe_payment_gateways.doctype.payment_gateway_int
 
 class PaymentGatewayRequest(Document):
 	def after_insert(self):
-		self.payment_url = f"""{frappe.utils.get_url()}/payment/pay?id={self.name}"""
 		self.send_payment_request()
+	
 	def validate(self):
 		self.validate_currency()
+		if not self.payment_url:
+			self.payment_url = f"""{frappe.utils.get_url()}/payment/pay?id={self.name}"""
 
 	def before_submit(self):
 		if self.status!="Paid":

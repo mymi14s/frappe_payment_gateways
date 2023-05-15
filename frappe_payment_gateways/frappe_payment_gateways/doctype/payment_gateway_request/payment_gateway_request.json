@@ -111,8 +111,8 @@
   },
   {
    "fieldname": "payment_url",
-   "fieldtype": "Small Text",
-   "label": "payment_url",
+   "fieldtype": "Data",
+   "label": "Payment URL",
    "read_only": 1
   },
   {
@@ -128,7 +128,7 @@
    "label": "Subject"
   },
   {
-   "default": "You have payment request for {doc.reference_name} with amount {doc.currency} {doc.amount} requested on {doc.request_date}",
+   "default": "You have payment request for {doc.reference_name} with amount {doc.currency} {doc.amount} requested on {doc.request_date}.\nVisit this link to make payment <a href=\"{doc.payment_url}\">Pay Now</a>",
    "fieldname": "message",
    "fieldtype": "Text",
    "label": "Message"
@@ -164,7 +164,7 @@
    "link_fieldname": "payment_gateway_request"
   }
  ],
- "modified": "2023-05-15 12:53:43.873768",
+ "modified": "2023-05-15 17:53:43.094184",
  "modified_by": "Administrator",
  "module": "Frappe Payment Gateways",
  "name": "Payment Gateway Request",
